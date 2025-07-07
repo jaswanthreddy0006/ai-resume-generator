@@ -34,6 +34,22 @@ It offers real-time preview, customization, and one-click PDF export. Ideal for 
 
 ---
 
+## 📈 Project Flowchart
+
+This shows how data flows from user input to resume output:
+
+![Flowchart](public/flowchart.png)
+
+---
+
+## 🔁 Sequence Diagram
+
+This shows how the user, frontend, backend, model, and PDF generator interact:
+
+![Sequence Diagram](public/sequence.png)
+
+---
+
 ## 🧰 Tech Stack
 
 | Layer          | Technology               |
@@ -46,33 +62,19 @@ It offers real-time preview, customization, and one-click PDF export. Ideal for 
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Architecture (Text Overview)
 
-### 🧩 Architecture Diagram
-
-![Flowchart](public/flowchart.png)
-
----
-
-## 🔁 Sequence of Operations
-
-1. User inputs personal info (name, education, etc.)
-2. Data is sent to LLM for formatting
-3. Model returns structured resume text
-4. Resume is displayed and downloadable as PDF
-
-### 📄 Sequence Diagram
-
-![Sequence Diagram](public/sequence.png)
+1. **Frontend**: Accepts user input via Gradio  
+2. **Backend**: Sends data to the LLM for structured output  
+3. **Model**: GPT model formats content into resume layout  
+4. **PDF Generator**: Converts final content into a downloadable file  
+5. **Output**: PDF preview/download enabled
 
 ---
 
-## 🎯 How It Works
+## 📜 Code Sample
 
-### Basic Flow:
-```text
-User Input ➜ Processed by LLM ➜ Output Resume Text ➜ Generate PDF ➜ Download
-Example JSON Input:
+```python
 resume_data = {
   "name": "Jaswanth Reddy",
   "education": "B.Tech in CSE",
@@ -80,19 +82,31 @@ resume_data = {
   "experience": "Intern at ABC Corp",
   "projects": "Chatbot, Resume Generator",
 }
-📦 Installation & Setup
 
-# Clone the repo
+formatted_resume = generate_resume(resume_data)
+```
+
+---
+
+## 🛠 Installation & Setup
+
+```bash
+# 1. Clone the repo
 git clone https://github.com/jaswanthreddy0006/genai-resume-builder.git
-
 cd genai-resume-builder
 
-# Install dependencies
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# Run the app
+# 3. Run the app
 python app.py
-📁 Project Structure
+```
+
+---
+
+## 📁 Project Structure
+
+```
 genai-resume-builder/
 ├── app.py               # Main application file
 ├── README.md            # Project documentation
@@ -101,63 +115,71 @@ genai-resume-builder/
 │   ├── flowchart.png
 │   └── sequence.png
 ├── .gradio/             # Interface files (optional)
-📖 Supported Resume Fields
-Full Name
+```
 
-Email / Phone
+---
 
-Objective (optional)
+## 📝 Supported Resume Sections
 
-Education
+- Full Name
+- Contact Details
+- Objective (optional)
+- Education
+- Projects
+- Work Experience
+- Skills
+- Certifications / Achievements
+- Languages Known
+- Hobbies and Interests
 
-Projects
+---
 
-Experience
+## 📦 PDF Output Features
 
-Skills
+- Clean formatting with section headings
+- Auto-wrap text with bullet points
+- Downloadable in one click
+- Print-ready and shareable
 
-Certifications / Achievements
+---
 
-Languages Known
+## 📱 Deployment Options
 
-💾 PDF Customization Options
-Choose layout template (future update)
+- **Local**: Run with Python
+- **HuggingFace Spaces**: Upload as a hosted app
+- **Streamlit Cloud**: Deploy with one click
 
-Change fonts, section order (planned)
+---
 
-Export to .docx or .json (in roadmap)
+## 🔮 Future Enhancements
 
-📱 Deployment Options
-Local: Run python app.py
+- Multiple resume templates
+- Light/Dark theme toggle
+- LinkedIn scraper to autofill resume
+- Export to `.docx`, `.json`
+- Resume score analysis using AI
+- Multi-language support
 
-HuggingFace Spaces: One-click deploy
+---
 
-Streamlit Cloud: For live hosting
+## 👨‍💻 Author
 
-🔮 Future Improvements
-Multiple resume templates
+**Name:** Jaswanth Reddy  
+**GitHub:** [jaswanthreddy0006](https://github.com/jaswanthreddy0006)  
+**Email:** youremail@example.com
 
-Auto-save drafts
+---
 
-LinkedIn scraping for auto-fill
+## 📜 License
 
-AI-powered objective/summary suggestions
+This project is for educational purposes only.  
+Licensed under the MIT License.
 
-Export to .docx and .json
+---
 
-👨‍💻 Author
-Name: Jaswanth Reddy
-GitHub: jaswanthreddy0006
-Email: youremail@example.com
+## 🙌 Acknowledgements
 
-📜 License
-This project is intended for educational use only. No commercial use without permission.
-
-🙌 Acknowledgements
-OpenAI
-
-Gradio
-
-HuggingFace
-
-Streamlit
+- [OpenAI](https://openai.com)  
+- [Gradio](https://gradio.app)  
+- [HuggingFace](https://huggingface.co)  
+- [Python](https://www.python.org)
