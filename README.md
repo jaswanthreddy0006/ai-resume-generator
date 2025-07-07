@@ -166,7 +166,7 @@ genai-resume-builder/
 
 **Name:** Jaswanth Reddy  
 **GitHub:** [jaswanthreddy0006](https://github.com/jaswanthreddy0006)  
-**Email:** youremail@example.com
+**Email:** jaswanth9985834977@gmail.com
 
 ---
 
